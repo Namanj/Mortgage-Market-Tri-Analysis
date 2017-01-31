@@ -416,13 +416,32 @@ class CustomEstimator(BaseEstimator):
 if __name__ == '__main__':
     #             crm = credit_risk_model()
     # X, y, cols = crm.get_feature_engineered_data()
-    from sklearn.datasets import load_iris
-    iris = load_iris()
-    data = pd.DataFrame(data= np.c_[iris['data'], iris['target']],
-                     columns= iris['feature_names'] + ['target'])    
-    X = data
-    y = data.target
-    y = np.mod(y, 2)
+    # from sklearn.datasets import load_iris
+    # iris = load_iris()
+    # data = pd.DataFrame(data= np.c_[iris['data'], iris['target']],
+    #                  columns= iris['feature_names'] + ['target'])    
+    # X = data
+    # y = data.target
+    # y = np.mod(y, 2)
+
+	df = pd.read_excel('data/Loan Book Nov-16.xlsx')
+	good_df = df[df['Bouncing'] < 10549.66]
+
+	# good_df = good_df.drop(['App No','Cus No','Loan#','Unnamed: 38', 'Short Term'] , axis = 1)
+	good_df['target'] = good_df['Bouncing'] * 1.0
+	good_df['target'] = good_df['target'].map(lambda item: item if item >0.001 else 0)
+	good_df['Type'] = good_df['Type'].apply(lambda item: 'Downsize' if item == 'downsize' else item)
+	good_df['Product Par Name'] = good_df['Product Par Name'].apply(lambda item: 'Home Loan' if 'Home Loan' in item and 'Home Loan Rehab' not in item else item)
+	good_df['Name of Proj'] = good_df['Name of Proj'].apply(lambda item: 'Default Builder' if item not in 'DEFAULT PROJECT' else 'DEFAULT PROJECT')
+	good_df['Rl/ Urb'] = good_df['Rl/ Urb'].apply(lambda item: 'other' if item not in ' Rural' and item not in 'Urban' else item)
+	good_df['count'] = 1
+
+	final_cols = ['Rl/ Urb', 'Name of Proj', 'Product Par Name' , 'Type', 'Final DPD Nov-16', 'target']
+	final_df = good_df[final_cols]
+	final_df = pd.get_dummies(final_df)
+
+	X = final_df
+	y = final_df['target']
 
     # Split data into training Set and Testing Set
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0, stratify = y)
@@ -471,7 +490,8 @@ if __name__ == '__main__':
 
     print final.best_params_
     print final.best_score_
-
+    print 'karde bhai'
+    print final.score(X_test, y_test)
     # define cost-benefit matrix
     # costbenefit = np.array([[0, -1], [-5, 0]])  # TP=0, FP=-1, FN=-5, TN=0
 
