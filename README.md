@@ -10,6 +10,7 @@ I’ve been in talks with Shubham Housing Finance ,which is located in Delhi, In
 
 
 I will explore 3 main high level questions:
+
 1.	Can I make a model that predicts whether a loan receipient is going to miss their next EMI payment? This is harder said than done as our loan applicants are by definition excluded from the formal economy, and hence don’t have means to demonstrate their fiscal responsibility over time. I will hence have to rely upon less obvious metrics to measure the loan worthiness of an applicant.
 
 2.	Predict the 3 cities where its most beneficial to open the next brick and mortar office. Currently Shubham has 90 offices in Northern India and plans on expanding. These offices, although crucial to facilitating business, are fairly expensive and hence optimizing for their location is a top priority for management. I plan to use the data both from Shubham, Indian Census from 2011 and various other web scraped sources in this analysis.
