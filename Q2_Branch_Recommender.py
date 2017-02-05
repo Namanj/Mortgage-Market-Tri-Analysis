@@ -58,9 +58,6 @@ class CallbackCondition(object):
 		
 		if self.num_of_points == 10:
 			return True
-
-	def function():
-		pass
 	
 
 class GradientValue(object):

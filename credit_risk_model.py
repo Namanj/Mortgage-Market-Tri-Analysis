@@ -5,7 +5,7 @@ import cPickle as pickle
 
 from sklearn import metrics
 import matplotlib.pyplot as plt
-
+import seaborn as sns
 
 random.seed(0)
 
@@ -16,15 +16,40 @@ class credit_risk_model(object):
         pass
 
     def load_models(self):
+        """
+        Load tuned model from a Pickle file
+        """
         with open('model.pkl', 'r') as f:
             self._model = pickle.load(f)
 
     def standard_confusion_matrix(self, y_true, y_predict):
+        """
+        Create the confusion matrix and return it so that we can easily multiply it to the Cost Benefit matrix
+
+        Parameters
+        ----------
+        y_true : numpy array
+            True output values
+        y_predict : numpy array
+            Predicted output values
+        """
         [[tn, fp], [fn, tp]] = metrics.confusion_matrix(y_true, y_predict)
         return np.array([[tp, fp], [fn, tn]])
 
 
     def profit_curve(self, cost_benefit_matrix, probabilities, y_true):
+        """
+        Create the confusion matrix and return it so that we can easily multiply it to the Cost Benefit matrix
+
+        Parameters
+        ----------
+        cost_benefit_matrix : numpy array
+            True output values
+        probabilities : numpy array
+            
+        y_true : numpy array
+            True output values            
+        """
         thresholds = sorted(set(probabilities), reverse=True)
         profits = []
         for threshold in thresholds:
