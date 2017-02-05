@@ -69,10 +69,10 @@ class initiate(object):
 			lon_0 = self._df_cities_lat_long['Long'].mean(), 
 			lat_0 = self._df_cities_lat_long['Lat'].mean(), 
 			projection = 'tmerc', ellps = 'WGS84',
-		    llcrnrlon = self._coords[0] - extra * w,					# llcrnrlon = Lower Left Corner Longitude
-		    llcrnrlat = self._coords[1] - extra + 0.01 * h,				# llcrnrlat = Lower Left Corner Latitude
-		    urcrnrlon = self._coords[2] + extra * w,					# urcrnrlon = Upper Right Corner Longitude
-		    urcrnrlat = self._coords[3] + extra + 0.01 * h,				# urcrnrlat = Upper Right Corner Latitude
+		    llcrnrlon = self._coords[0] - extra * w,				# llcrnrlon = Lower Left Corner Longitude
+		    llcrnrlat = self._coords[1] - extra + 0.01 * h,			# llcrnrlat = Lower Left Corner Latitude
+		    urcrnrlon = self._coords[2] + extra * w,				# urcrnrlon = Upper Right Corner Longitude
+		    urcrnrlat = self._coords[3] + extra + 0.01 * h,			# urcrnrlat = Upper Right Corner Latitude
 		    lat_ts = 0, resolution = 'i', suppress_ticks = True)
 
 		self._state_shapefile.readshapefile(
@@ -85,14 +85,10 @@ class initiate(object):
 	def map_df(self):
 	    # set up a map dataframe
 		a = 'state_info'.format(state = self._state)
-		self._df_map = pd.DataFrame(
-							{
-						    'poly': [Polygon(xy) for xy in self._state_shapefile.UP],
-						    'PC_NAME': [district['PC_NAME'] for district in self._state_shapefile.UP_info]
-						    })
-
-		self._df_map['area_m'] = self._df_map['poly'].map(lambda item: item.area)
-		self._df_map['area_km'] = self._df_map['area_m'] / 100000
+		self._df_map = pd.DataFrame({
+			'poly': [Polygon(xy) for xy in self._state_shapefile.UP],
+			'PC_NAME': [district['PC_NAME'] for district in self._state_shapefile.UP_info]
+			})
 
 		# Create Point objects in map coordinates from dataframe lon and lat values
 		map_points = pd.Series([Point(self._state_shapefile(mapped_x, mapped_y)) for mapped_x, mapped_y in \
@@ -106,9 +102,9 @@ class initiate(object):
 		# draw state districts from polygons
 		self._df_map['districts'] = self._df_map['poly'].map(lambda item: PolygonPatch(
 		    item,
-		    fc='#555555',
-		    ec='#787878', lw=.25, alpha=.9,
-		    zorder=4))
+		    fc = '#555555',
+		    ec = '#787878', lw = .25, alpha = .9,
+		    zorder = 4))
 
 		pass
 

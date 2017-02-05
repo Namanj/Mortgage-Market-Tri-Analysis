@@ -3,7 +3,7 @@ import numpy as np
 import random
 import cPickle as pickle
 
-from sklearn import metrics
+# from sklearn import metrics
 import matplotlib.pyplot as plt
 import seaborn as sns
 from shapely.geometry import Point
@@ -64,12 +64,10 @@ class BranchRecommender(object):
 		callback = CallbackCondition()
 
 		list_of_new_points = []
-		for i in range(10):
-		    result = basinhopping(f, x0, niter = 10, minimizer_kwargs = minimizer_kwargs, interval = 100,
-		                      take_step = take_step, callback = callback)
-		    list_of_new_points.append(result)
+		result = basinhopping(f, x0, niter = 10, minimizer_kwargs = minimizer_kwargs, interval = 100, take_step = take_step, callback = callback)
+		list_of_new_points.append(result)
 		
-		# print callback.list_of_new_points
+		print callback.list_of_new_points
 		# print list_of_new_points
 
 
