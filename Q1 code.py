@@ -87,7 +87,8 @@ if __name__ == '__main__':
 
     # Split data into training Set and Testing Set
     indices = np.arange(X.shape[0])
-    X_train, X_test, y_train, y_test, train_indices, test_indices = train_test_split(X, y, indices, test_size = 0.3, random_state = 0, stratify = y)
+    X_train, X_test, y_train, y_test, train_indices, test_indices = train_test_split(X, y, indices, 
+                                                    test_size = 0.3, random_state = 0, stratify = y)
 
     pipeline = Pipeline([
         ('rescale',MinMaxScaler()),
@@ -95,7 +96,7 @@ if __name__ == '__main__':
         # ('model', RF(class_weight = 'balanced_subsample'))  # classifier
         ('model', AdaBoost(n_estimators = 50))  # classifier
     ])
-    parameters = {}
+    parameters = {'model__n_estimators': [50, 100, 150]}
 
     best_model = GridSearchCV(pipeline, parameters, cv = 5, verbose = 1 , scoring='f1'
                 , fit_params={'model__sample_weight': np.array(weights[train_indices])})
@@ -111,6 +112,6 @@ if __name__ == '__main__':
     dump_models(best_model)
 
     crm = CRM()
-    costbenefit = np.array([[0, -250], [-1000, 0]])  # TP=0, FP=-1, FN=-50, TN=0
+    costbenefit = np.array([[0, -250], [-1000, 0]])  # TP=0, FP=-250, FN=-1000, TN=0
     crm.plot_profit_models(costbenefit, X_train, X_test, y_train, y_test)
 
