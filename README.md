@@ -28,7 +28,7 @@ I will explore 3 main high level questions:
 
 abc11
 <a href="https://www.youtube.com/watch?v=F0mVX1ReX2s">
-<div><img style = "float: center;" src = 'https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg'/></div>
+<div><img style = "float: right;" src = 'https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg'/></div>
 </a>
 
 abc22
