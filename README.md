@@ -27,5 +27,5 @@ I will explore 3 main high level questions:
 <!-- [![Alt text for your video](https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg)](https://www.youtube.com/watch?v=F0mVX1ReX2s)
  -->
 <a href="https://www.youtube.com/watch?v=F0mVX1ReX2s">
-<img style = "float: center;" src = 'https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg'/>
+<img align="middle" src = 'https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg'/>
 </a>
