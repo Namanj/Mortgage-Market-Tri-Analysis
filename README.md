@@ -24,7 +24,7 @@ I will explore 3 main high level questions:
 
 3.	Predict upcoming volume of business so that Shubham can better manage its capital reserves. If you think about it, the raw material that this firm consumes is capital itself, as this firm is in the business deploying capital based on its risk evaluation. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.
 
-[![Alt text for your video](https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg?style=centerme)](https://www.youtube.com/watch?v=F0mVX1ReX2s)
+[![Alt text for your video](https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg?style=center)](https://www.youtube.com/watch?v=F0mVX1ReX2s)
 
 abc1
 
