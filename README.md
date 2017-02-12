@@ -28,6 +28,6 @@ I will explore 3 main high level questions:
 
 abc1
 
-<div style="text-align:center"><img src = '(https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg)'/>https://www.youtube.com/watch?v=F0mVX1ReX2s</div>
+<div style="text-align:center"><img src = 'https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg'/>https://www.youtube.com/watch?v=F0mVX1ReX2s</div>
 
 abc2
