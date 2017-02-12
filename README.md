@@ -31,22 +31,4 @@ I will explore 3 main high level questions:
 <p style="text-align:center;"><img src = 'https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg'></p>
 </a>
 
-
-Hello there !
-
-<div id="container">
-    <img src = 'https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg'/>
-    This is an image
-</div>
-
-Hi !
-
-#container {
-    height:100px;
-    line-height:100px;
-}
-
-#container img {
-    vertical-align:middle;
-    max-height:100%;
-}
+<div style="text-align:center"><img src ='https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg' /></div>
