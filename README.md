@@ -33,4 +33,6 @@ I will explore 3 main high level questions:
 
 <div style="text-align:center"><img src ='https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg' /></div>
 
-<img align='center' src='https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg' alt="abc">
+<p align="center">
+  <img src='https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg'>
+</p>
