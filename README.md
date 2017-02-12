@@ -1,4 +1,4 @@
-# Using Data Science for Credit Risk Modeling
+# Mortgage-Market-Tri-Analysis
 
 
 High Level Description (Question, Problem, Description):
@@ -16,3 +16,5 @@ I will explore 3 main high level questions:
 2.	Predict the 3 cities where its most beneficial to open the next brick and mortar office. Currently Shubham has 90 offices in Northern India and plans on expanding. These offices, although crucial to facilitating business, are fairly expensive and hence optimizing for their location is a top priority for management. I plan to use the data both from Shubham, Indian Census from 2011 and various other web scraped sources in this analysis.
 
 3.	Predict upcoming volume of business so that Shubham can better manage its capital reserves. If you think about it, the raw material that this firm consumes is capital itself, as this firm is in the business deploying capital based on its risk evaluation. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.
+
+[!(https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg)](https://www.youtube.com/watch?v=F0mVX1ReX2s)
