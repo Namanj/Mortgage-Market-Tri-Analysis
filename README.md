@@ -1,15 +1,15 @@
 # Mortgage Market Tri Analysis
 
-Optimizing Capital Allocation for Mortgage Market Loans
+Optimizing Capital Allocation for Mortgage Market Loans__
 Naman Jain, February 2017
 
 # Contents:
-. Motivation
-. For each of the 3 goals:
-	. Data
-	. Approach
-	. Results
-. Next Steps
+- Motivation
+- For each of the 3 goals:
+	- Data
+	- Approach
+	- Results
+- Next Steps
 
 # Motivation:
 This project was developed as a capstone project for Galvanize's Data Science Immersive program.
