@@ -3,7 +3,7 @@
 Optimizing Capital Allocation for Mortgage Market Loans  
 Naman Jain, February 2017
 
-# Contents:
+## Contents:
 - Motivation
 - For each of the 3 goals:
 	* Data
@@ -11,7 +11,7 @@ Naman Jain, February 2017
 	* Results
 - Next Steps
 
-# Motivation:
+## Motivation:
 This project was developed as a capstone project for Galvanize's Data Science Immersive program.
 
 I worked with data from Shubham Housing Finance, a firm in India that has given out more than USD $150 Million as loans over the past 5 years. My goal was to use data science to help the firm optimize its usage of capital, both in its loan allocation process and in its expansion.
@@ -30,9 +30,9 @@ Want a quick 4 minute overview? I gave a lightening presentation which can be fo
 
 I will present each of these 3 goals here, below:
 
-# Data:
+## Data:
 
-# Next Steps:
+## Next Steps:
 
 I’m passionate about democratizing access to capital and helping people left behind the formal economy to reap the benefits of capitalism. My goal over these 2 weeks was to help the firm optimize its capital allocation, both within the firm and as loans to customers.
 
