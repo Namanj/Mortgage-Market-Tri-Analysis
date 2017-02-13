@@ -79,7 +79,7 @@ Finally my 3rd goal was to be able to predict upcoming volume of business over t
 </p>
 
 <p align="center">
-  <img src='/images/Forecast.png' width="800"  height="500">
+  <img src='/images/Forecast.png' width="900"  height="500">
 </p>
 
 ## Next Steps:
