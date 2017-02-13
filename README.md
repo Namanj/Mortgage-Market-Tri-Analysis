@@ -61,7 +61,7 @@ I got the existing office profitability data from the firm, and I used data from
 This is a constrained optimization problem, with the objective being to find n global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
-  <img src='/images/Cost Function.png' width="1200" height="400">
+  <img src='/images/Cost Function.png' width="1400" height="400">
 </p>
 
 
