@@ -75,11 +75,11 @@ My cost function strikes a balance between clustering of office locations vs spr
 Finally my 3rd goal was to be able to predict upcoming volume of business over the next quarter so that Shubham can better manage its capital reserves. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.
 
 <p align="center">
-  <img src='/images/Shubham volume of business overtime.png'>
+  <img src='/images/Shubham volume of business overtime.png' width="700"  height="550">
 </p>
 
 <p align="center">
-  <img src='/images/Forecast.png'>
+  <img src='/images/Forecast.png' width="700"  height="550">
 </p>
 
 ## Next Steps:
