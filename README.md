@@ -44,7 +44,7 @@ The firm has a number of office locations spread across a state, and they're wis
 This is a constrained optimization problem, with the objective being to find n global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
-  <img src='images/Cost Function'>
+  <img src='Mortgage-Market-Tri-Analysis/images/Cost Function.png'>
 </p>
 
 I got the existing office profitability data from the firm, and I used data from India's census from 2011 to determine the district GDP.
