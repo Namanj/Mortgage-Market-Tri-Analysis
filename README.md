@@ -46,7 +46,7 @@ I eventually decided to use the AdaBoost ensemble model, which I tuned using a G
 Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of making a call 
 
 <p align="center">
-  <img src='/images/determine best threshold.png'>
+  <img src='/images/determine best threshold.png' width="700"  height="550">
 </p>
 
 ## Location Recommender:
@@ -59,7 +59,7 @@ I got the existing office profitability data from the firm, and I used data from
 This is a constrained optimization problem, with the objective being to find n global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
-  <img src='/images/Cost Function.png' width="500"  height="450">
+  <img src='/images/Cost Function.png'>
 </p>
 
 
