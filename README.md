@@ -46,7 +46,7 @@ I eventually decided to use the AdaBoost ensemble model, which I tuned using a G
 Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of making a call 
 
 <p align="center">
-  <img src='/images/determine best threshold.png' width="700"  height="550">
+  <img src='/images/determine best threshold.png' width="900"  height="550">
 </p>
 
 ## Location Recommender:
