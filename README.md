@@ -31,6 +31,28 @@ Want a quick 4 minute overview? I gave a lightening presentation which can be fo
 
 
 ## Loan Default Classifier:
+My goal was to build a classifier that can predict the probability of a customer defaulting on their loan payment. If the firm can recognize such customers ahead of time then it can do a better job of getting ahead of the problem.
+
+I used data provided to me by the firm which consisted of all the loans that they had given over the past 5 years, along with their performance. There were a total of ~15k data points with each representing a loan, and there were 40 columns of which 20 were categorical, 19 were numerical and 1 was temporal.
+
+I spent quite some time reducing the dimensionality of my data by sub-selecting the categorical variables based on signal to noise ratio, sub-selecting the numerical columns by thinking about how they would correlate with my dependent variable, and by doing some feature engineering. I eventually decided to use these features in my model:  
+- 
+
+## Location Recommender:
+The firm has a number of office locations spread across a state, and they're wishing to expand. My goal was to recommend new office locations to them which would maximize growth opportunity.
+
+This is a constrained optimization problem, with the objective being to find n global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
+
+<p align="center">
+  <img src='images/Cost Function'>
+</p>
+
+I got the existing office profitability data from the firm, and I used data from India's census from 2011 to determine the district GDP.
+
+The cost function was really sensitive to initializations and one of the main challenges of defining it was scaling the data that I had collected from different sources.  
+
+## Forecasting Business:
+My goal was to build a classifier that can predict the probability of a customer defaulting on their loan payment. If the firm can recognize such customers ahead of time then it can do a better job of getting ahead of the problem
 
 ## Next Steps:
 
