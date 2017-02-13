@@ -31,6 +31,7 @@ Want a quick 4 minute overview? I gave a lightening presentation which can be fo
 </p>
 
 
+
 ## Loan Default Classifier:
 First of my goals was to build a classifier that can predict the probability of a customer defaulting on their loan payment. If the firm can recognize such customers ahead of time then it can do a better job of getting ahead of the problem.
 
@@ -60,7 +61,7 @@ I got the existing office profitability data from the firm, and I used data from
 This is a constrained optimization problem, with the objective being to find n global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
-  <img src='/images/Cost Function.png' width="1100" height="400">
+  <img src='/images/Cost Function.png' width="1200" height="400">
 </p>
 
 
