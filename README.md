@@ -67,8 +67,8 @@ The cost function was really sensitive to initializations and one of the main ch
 
 ### Results
 My cost function strikes a balance between clustering of office locations vs spreading them out.  
-<p align="center">
-  <img src='/images/UP_visualized.png' style="width:200px;height:100px;">
+<p align="center" style="width:200px;height:100px;">
+  <img src='/images/UP_visualized.png' >
 </p>
 
 ## Forecasting Business:
