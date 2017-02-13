@@ -33,10 +33,19 @@ Want a quick 4 minute overview? I gave a lightening presentation which can be fo
 ## Loan Default Classifier:
 My goal was to build a classifier that can predict the probability of a customer defaulting on their loan payment. If the firm can recognize such customers ahead of time then it can do a better job of getting ahead of the problem.
 
+### Data
 I used data provided to me by the firm which consisted of all the loans that they had given over the past 5 years, along with their performance. There were a total of ~15k data points with each representing a loan, and there were 40 columns of which 20 were categorical, 19 were numerical and 1 was temporal.
 
+### Approach
 I spent quite some time reducing the dimensionality of my data by sub-selecting the categorical variables based on signal to noise ratio, sub-selecting the numerical columns by thinking about how they would correlate with my dependent variable, and by doing some feature engineering. I eventually decided to use these features in my model:  
 - a
+
+### Results
+Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of making a call 
+
+<p align="center">
+  <img src='/images/determine best threshold.png'>
+</p>
 
 ## Location Recommender:
 The firm has a number of office locations spread across a state, and they're wishing to expand. My goal was to recommend new office locations to them which would maximize growth opportunity.
@@ -51,8 +60,20 @@ I got the existing office profitability data from the firm, and I used data from
 
 The cost function was really sensitive to initializations and one of the main challenges of defining it was scaling the data that I had collected from different sources.  
 
+<p align="center">
+  <img src='/images/UP_visualized.png'>
+</p>
+
 ## Forecasting Business:
-My goal was to build a classifier that can predict the probability of a customer defaulting on their loan payment. If the firm can recognize such customers ahead of time then it can do a better job of getting ahead of the problem
+Finally my 3rd goal was to be able to predict upcoming volume of business over the next quarter so that Shubham can better manage its capital reserves. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.
+
+<p align="center">
+  <img src='/images/Shubham volume of business overtime.png'>
+</p>
+
+<p align="center">
+  <img src='/images/Forecast.png'>
+</p>
 
 ## Next Steps:
 
@@ -69,5 +90,5 @@ I will explore 3 main high level questions:
 
 2.	Predict the 3 cities where its most beneficial to open the next brick and mortar office. Currently Shubham has 90 offices in Northern India and plans on expanding. These offices, although crucial to facilitating business, are fairly expensive and hence optimizing for their location is a top priority for management. I plan to use the data both from Shubham, Indian Census from 2011 and various other web scraped sources in this analysis.
 
-3.	Predict upcoming volume of business so that Shubham can better manage its capital reserves. If you think about it, the raw material that this firm consumes is capital itself, as this firm is in the business deploying capital based on its risk evaluation. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.
+3.	Predict upcoming volume of business so that Shubham can better manage its capital reserves. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.
 
