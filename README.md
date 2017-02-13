@@ -14,7 +14,8 @@ Naman Jain, February 2017
 ## Motivation:
 This project was developed as a capstone project for Galvanize's Data Science Immersive program.
 
-I worked with data from Shubham Housing Finance, a firm in India that has given out more than USD $150 Million as loans over the past 5 years. My goal was to use data science to help the firm optimize its usage of capital, both in its loan allocation process and in its expansion.
+I worked with data from Shubham Housing Finance, a firm in India that has given out more than USD $150 Million as loans over the past 5 years.  
+My goal was to use data science to help the firm optimize its usage of capital, both in its loan allocation process and in its expansion.
 
 I decided to break this broad goal down into 3 specific goals:  
 1) Build a classifier that predicts the probability that a customer will default on their loan  
@@ -28,9 +29,8 @@ Want a quick 4 minute overview? I gave a lightening presentation which can be fo
 </a>
 </p>
 
-I will present each of these 3 goals here, below:
 
-## Data:
+## Loan Default Classifier:
 
 ## Next Steps:
 
