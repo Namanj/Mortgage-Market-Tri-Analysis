@@ -59,7 +59,7 @@ I decided not to oversample my imbalanced classes and instead used sample weight
 I did however hack the pipeline functionality to exploit its book keeping while allowing me to have a resampling transformer step, which can be found HERE.
 
 ### Results
-Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of making a call 
+Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of a False Positive, aka making a call to a customer who wasn't going to default on their loan, to a False Negative, aka not making a call to a customer who was going to default on their loan, is about 1:43. Given this Cost-Benefit Matrix, I decided on the threshold which maximized my profit, as shown in the graph below, and my model has a Recall of 98%.
 
 <p align="center">
   <img src='/images/determine best threshold.png' width="900"  height="550">
