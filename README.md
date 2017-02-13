@@ -35,6 +35,10 @@ Want a quick 4 minute overview? I gave a lightening presentation which can be fo
 ## Loan Default Classifier:
 First of my goals was to build a classifier that can predict the probability of a customer defaulting on their loan payment. If the firm can recognize such customers ahead of time then it can do a better job of getting ahead of the problem.
 
+This problem was harder than it seems for 2 reasons:  
+1) My target audience are people who have been excluded from the formal economy and hence don’t have the means to demonstrate their fiscal responsibility over time. As a result, I had to rely upon feature engineering in order to evaluate default probabiliy amongst them.  
+2) Only 3% of the people ever default on their loans, making my classes very imbalanced.  
+
 ### Data
 I used data provided to me by the firm which consisted of all the loans that they had given over the past 5 years, along with their performance.  
 There were a total of ~15k data points with each representing a loan, and there were 40 columns of which 20 were categorical, 19 were numerical and 1 was temporal.
@@ -68,7 +72,7 @@ Classifying the 3% signal proved to be quite a challenge. The firm told me that 
 My Model was able to get a Recall of 98%.  
 
 ## Location Recommender:
-The firm has a number of office locations spread across a state, and they're wishing to expand. My goal was to recommend new office locations to them which would maximize growth opportunity.
+The firm has a number of office locations spread across a state, and they're wishing to expand. These offices, although crucial to facilitating new business, are fairly expensive and hence optimizing for their location is a top priority for management. My goal was to recommend new office locations to them which would maximize growth opportunity.
 
 ### Data
 I got the existing office profitability data from the firm, and I used data from India's census from 2011 to determine the district GDP.
@@ -84,7 +88,7 @@ This is a constrained optimization problem, with the objective being to find n g
 The cost function was really sensitive to initializations and one of the main challenges of defining it was scaling the data that I had collected from different sources.  
 
 ### Results
-My cost function strikes a balance between clustering of office locations vs spreading them out.  
+The cost function strikes a balance between clustering of office locations vs spreading them out.  
 <p align="center">
   <img src='/images/UP_visualized.png'  width="700"  height="600">
 </p>
@@ -109,11 +113,14 @@ A significant portion of the Indian population isn’t able to participate in th
 I’ve been in talks with Shubham Housing Finance ,which is located in Delhi, India, for the past couple of weeks. This firm serves the underserved portion of the population as defined previously via an in house system that rates the credit worthiness of a loan applicant and has so far given out more than USD$128 Million of loans in the past 5yrs.
 
 
-I will explore 3 main high level questions:
+Loan Default Classifier :
+Extend model to allow a particular branch to determine the risk of loan default per portfolio
 
-1.	Can I make a model that predicts whether a loan receipient is going to miss their next EMI payment? This is harder said than done as our loan applicants are by definition excluded from the formal economy, and hence don’t have means to demonstrate their fiscal responsibility over time. I will hence have to rely upon less obvious metrics to measure the loan worthiness of an applicant.
+Location Recommender :
+Extend Cost Function to determine the tradeoff between clustering of office locations vs having a larger spread
+Make Cost Function less sensitive to initializations 
 
-2.	Predict the 3 cities where its most beneficial to open the next brick and mortar office. Currently Shubham has 90 offices in Northern India and plans on expanding. These offices, although crucial to facilitating business, are fairly expensive and hence optimizing for their location is a top priority for management. I plan to use the data both from Shubham, Indian Census from 2011 and various other web scraped sources in this analysis.
+Forecasting Business :
+Incorporate Exponential Smoothing (ETS) in the forecasting
 
-3.	Predict upcoming volume of business so that Shubham can better manage its capital reserves. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.
 
