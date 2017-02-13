@@ -36,8 +36,8 @@ Want a quick 4 minute overview? I gave a lightening presentation which can be fo
 First of my goals was to build a classifier that can predict the probability of a customer defaulting on their loan payment. If the firm can recognize such customers ahead of time then it can do a better job of getting ahead of the problem.
 
 This problem was harder than it seems for 2 reasons:  
-1) My target audience are people who have been excluded from the formal economy and hence don’t have the means to demonstrate their fiscal responsibility over time. As a result, I had to rely upon feature engineering in order to evaluate default probabiliy amongst them.  
-2) Only 3% of the people ever default on their loans, making my classes very imbalanced.  
+1) My target audience are people who have been excluded from the formal economy and hence don’t have the means to demonstrate their fiscal responsibility over time. As a result, I had to rely upon feature engineering in order to evaluate default probabiliy amongst them  
+2) Only 3% of the people ever default on their loans, making the classes very imbalanced  
 
 ### Data
 I used data provided to me by the firm which consisted of all the loans that they had given over the past 5 years, along with their performance.  
@@ -46,15 +46,14 @@ There were a total of ~15k data points with each representing a loan, and there 
 ### Approach
 I spent quite some time reducing the dimensionality of my data by sub-selecting the categorical variables based on signal to noise ratio, sub-selecting the numerical columns by thinking about how they would correlate with my dependent variable, and by doing some feature engineering.  
 I eventually decided to use these features in my model:  
-- Type
-- Product Par Name
-- Name of Proj
-- Rl/ Urb
-- EMI
-- ROI
-- Tenor
-- Final DPD Nov-16
-- Amt Db
+- Type - Whether loan has been downsized
+- Product Par Name - Loan product category
+- Name of Proj - Whether loan was processed as part of a Housing project, or if it was given directly to the customer
+- Rl/ Urb - Whether customer is in a Rural or Urban location
+- EMI - Easy Monthly installment, the amount which customer has to pay every month
+- ROI - Represents rate of interest charged to client for the product provided
+- Tenor - Represent loan repayment period
+- Amt Db - Represents amount of loan disbursed to client till Nov '16
 
 I decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found HERE
 
