@@ -52,18 +52,20 @@ I eventually decided to use these features in my model:
 - Final DPD Nov-16
 - Amt Db
 
-I eventually decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found HERE
+I decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found HERE
 
 I decided not to oversample my imbalanced classes and instead used sample weights in AdaBoost to incentivize my cost function to focus more on the minority class. I made this decision as I wanted to use Scikit learn's pipeline as an estimator in a GridSearchCV, in order to tune my hyper-parameters.
 
-I did however hack the pipeline functionality to exploit its book keeping while allowing me to have a resampling transformer step, which can be found HERE.
+Although I eventually decided not to Oversample, I did however hack the pipeline functionality to exploit its book keeping while allowing me to have a resampling transformer step, the code can be found HERE.
 
 ### Results
-Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of a False Positive, aka making a call to a customer who wasn't going to default on their loan, to a False Negative, aka not making a call to a customer who was going to default on their loan, is about 1:43. Given this Cost-Benefit Matrix, I decided on the threshold which maximized my profit, as shown in the graph below, and my model has a Recall of 98%.
+Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of a False Positive, aka making a call to a customer who wasn't going to default on their loan, to a False Negative, aka not making a call to a customer who was going to default on their loan, is about 1:43. Given this Cost-Benefit Matrix, I decided on the threshold which maximized my profit, as shown in the graph below  
 
 <p align="center">
   <img src='/images/determine best threshold.png' width="900"  height="550">
 </p>
+
+My Model was able to get a Recall of 98%.  
 
 ## Location Recommender:
 The firm has a number of office locations spread across a state, and they're wishing to expand. My goal was to recommend new office locations to them which would maximize growth opportunity.
