@@ -25,7 +25,7 @@ I decided to break this broad goal down into 3 individual more specific goals:
 Want a quick 4 minute overview? I gave a lightening presentation which can be found here:
 <p align="center">
   <a href="https://www.youtube.com/watch?v=F0mVX1ReX2s">
-  <img src='https://img.youtube.com/vi/F0mVX1ReX2s/0.jpg'>
+  <img src='/images/Presentation.png'>
 </a>
 </p>
 
@@ -39,6 +39,8 @@ I used data provided to me by the firm which consisted of all the loans that the
 ### Approach
 I spent quite some time reducing the dimensionality of my data by sub-selecting the categorical variables based on signal to noise ratio, sub-selecting the numerical columns by thinking about how they would correlate with my dependent variable, and by doing some feature engineering. I eventually decided to use these features in my model:  
 - a
+
+I eventually decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found HERE
 
 ### Results
 Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of making a call 
