@@ -36,13 +36,27 @@ Want a quick 4 minute overview? I gave a lightening presentation which can be fo
 First of my goals was to build a classifier that can predict the probability of a customer defaulting on their loan payment. If the firm can recognize such customers ahead of time then it can do a better job of getting ahead of the problem.
 
 ### Data
-I used data provided to me by the firm which consisted of all the loans that they had given over the past 5 years, along with their performance. There were a total of ~15k data points with each representing a loan, and there were 40 columns of which 20 were categorical, 19 were numerical and 1 was temporal.
+I used data provided to me by the firm which consisted of all the loans that they had given over the past 5 years, along with their performance.  
+There were a total of ~15k data points with each representing a loan, and there were 40 columns of which 20 were categorical, 19 were numerical and 1 was temporal.
 
 ### Approach
-I spent quite some time reducing the dimensionality of my data by sub-selecting the categorical variables based on signal to noise ratio, sub-selecting the numerical columns by thinking about how they would correlate with my dependent variable, and by doing some feature engineering. I eventually decided to use these features in my model:  
-- a
+I spent quite some time reducing the dimensionality of my data by sub-selecting the categorical variables based on signal to noise ratio, sub-selecting the numerical columns by thinking about how they would correlate with my dependent variable, and by doing some feature engineering.  
+I eventually decided to use these features in my model:  
+- Type
+- Product Par Name
+- Name of Proj
+- Rl/ Urb
+- EMI
+- ROI
+- Tenor
+- Final DPD Nov-16
+- Amt Db
 
 I eventually decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found HERE
+
+I decided not to oversample my imbalanced classes and instead used sample weights in AdaBoost to incentivize my cost function to focus more on the minority class. I made this decision as I wanted to use Scikit learn's pipeline as an estimator in a GridSearchCV, in order to tune my hyper-parameters.
+
+I did however hack the pipeline functionality to exploit its book keeping while allowing me to have a resampling transformer step, which can be found HERE.
 
 ### Results
 Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of making a call 
