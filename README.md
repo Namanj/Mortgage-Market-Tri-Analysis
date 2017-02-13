@@ -36,7 +36,7 @@ My goal was to build a classifier that can predict the probability of a customer
 I used data provided to me by the firm which consisted of all the loans that they had given over the past 5 years, along with their performance. There were a total of ~15k data points with each representing a loan, and there were 40 columns of which 20 were categorical, 19 were numerical and 1 was temporal.
 
 I spent quite some time reducing the dimensionality of my data by sub-selecting the categorical variables based on signal to noise ratio, sub-selecting the numerical columns by thinking about how they would correlate with my dependent variable, and by doing some feature engineering. I eventually decided to use these features in my model:  
-- 
+- a
 
 ## Location Recommender:
 The firm has a number of office locations spread across a state, and they're wishing to expand. My goal was to recommend new office locations to them which would maximize growth opportunity.
@@ -44,7 +44,7 @@ The firm has a number of office locations spread across a state, and they're wis
 This is a constrained optimization problem, with the objective being to find n global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
-  <img src='Mortgage-Market-Tri-Analysis/images/Cost Function.png'>
+  <img src='/images/Cost Function.png'>
 </p>
 
 I got the existing office profitability data from the firm, and I used data from India's census from 2011 to determine the district GDP.
