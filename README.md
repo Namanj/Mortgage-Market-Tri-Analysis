@@ -17,6 +17,7 @@ This project was developed as a capstone project for Galvanize's Data Science Im
 I worked with data from Shubham Housing Finance, a firm in India that has given out more than USD $150 Million as loans over the past 5 years.  
 
 My goal was to use data science to help the firm optimize its usage of capital, both in its loan allocation process and in its expansion.  
+
 I decided to break this broad goal down into 3 individual more specific goals:  
 1) Build a classifier that predicts the probability that a customer will default on their loan  
 2) Recommend new office locations which maximize growth potential  
@@ -59,7 +60,7 @@ I got the existing office profitability data from the firm, and I used data from
 This is a constrained optimization problem, with the objective being to find n global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
-  <img src='/images/Cost Function.png' height="400">
+  <img src='/images/Cost Function.png' width="1100" height="400">
 </p>
 
 
@@ -68,7 +69,7 @@ The cost function was really sensitive to initializations and one of the main ch
 ### Results
 My cost function strikes a balance between clustering of office locations vs spreading them out.  
 <p align="center">
-  <img src='/images/UP_visualized.png'  width="700"  height="550">
+  <img src='/images/UP_visualized.png'  width="700"  height="600">
 </p>
 
 ## Forecasting Business:
