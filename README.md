@@ -111,7 +111,7 @@ A notebook on this analysis can be found HERE
 ### Results
 The SARIMAX model was pretty successful in forecasting for the 30% unseen data:
 <p align="center">
-  <img src='/images/Forecast.png' width="1000"  height="400">
+  <img src='/images/Forecast.png' width="1000"  height="500">
 </p>
 The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186
 
