@@ -103,7 +103,7 @@ This is the amount of business the firm has done per month from 2012 to 2016:
 </p>
 
 ### Approach
-I used the ACF and PACF graphs to determine the 
+I used the ACF and PACF graphs to determine the appropriate number of AR and MA lags. As I knew that loan activity tends to have a strong yearly pattern, I decided to incorporate the seasonality explicitly by using a SARIMAX model.  
 A notebook on this analysis can be found HERE  
 
 ### Results
