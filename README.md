@@ -102,26 +102,20 @@ This is the amount of business the firm has done per month from 2012 to 2016:
   <img src='/images/Shubham volume of business overtime.png' width="700"  height="400">
 </p>
 
+As we can see, there was a strong one time event in the middle of 2016. Such a strong one time event, this close to the horizon, is very bad from a forecasting perspective, and I had to deal with it before I could do the forecasting  
 ### Approach
-I used the ACF and PACF graphs to determine the appropriate number of AR and MA lags. As I knew that loan activity tends to have a strong yearly pattern, I decided to incorporate the seasonality explicitly by using a SARIMAX model.  
+I used the ACF and PACF graphs to determine the appropriate number of AR and MA lags. As I knew that loan activity tends to have a strong yearly pattern, I decided to incorporate the seasonality explicitly by using a SARIMAX model with 12 months lag.  
+I dealt with the strong one time event by replacing its values by the predictions from the best model.  
 A notebook on this analysis can be found HERE  
 
 ### Results
-The model was pretty successful in forecasting for the 30% unseen data:
+The SARIMAX model was pretty successful in forecasting for the 30% unseen data:
 <p align="center">
-  <img src='/images/Forecast.png' width="900"  height="500">
+  <img src='/images/Forecast.png' width="1000"  height="600">
 </p>
 The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186
 
 ## Next Steps:
-
-I’m passionate about democratizing access to capital and helping people left behind the formal economy to reap the benefits of capitalism. My goal over these 2 weeks was to help the firm optimize its capital allocation, both within the firm and as loans to customers.
-
-A significant portion of the Indian population isn’t able to participate in the formal economy for a number of reasons ranging from lack of a formal source of income, lack of filed income taxes, lack of collateral and many more. Such requirements, although well thought out, exclude too many responsible people who wish to finance an investment.
-
-I’ve been in talks with Shubham Housing Finance ,which is located in Delhi, India, for the past couple of weeks. This firm serves the underserved portion of the population as defined previously via an in house system that rates the credit worthiness of a loan applicant and has so far given out more than USD$128 Million of loans in the past 5yrs.
-
-
 Loan Default Classifier :
 Extend model to allow a particular branch to determine the risk of loan default per portfolio
 
