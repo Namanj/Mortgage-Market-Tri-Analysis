@@ -68,7 +68,7 @@ Classifying the 3% signal proved to be quite a challenge. The firm told me that 
   <img src='/images/determine best threshold.png' width="900"  height="550">
 </p>
 
-My Model was able to get a Recall of 98%.  
+The optimal model had a Recall of 98%  
 
 ## Location Recommender:
 The firm has a number of office locations spread across a state, and they're wishing to expand. These offices, although crucial to facilitating new business, are fairly expensive and hence optimizing for their location is a top priority for management. My goal was to recommend new office locations to them which would maximize growth opportunity.
