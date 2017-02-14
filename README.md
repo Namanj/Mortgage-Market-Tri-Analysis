@@ -55,7 +55,7 @@ I eventually decided to use these features in my model:
 - Tenor - Represent loan repayment period
 - Amt Db - Represents amount of loan disbursed to client till Nov '16
 
-I decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found HERE
+I decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Loan%20Default%20Pipeline.py)
 
 I decided not to oversample my imbalanced classes and instead used sample weights in AdaBoost to incentivize my cost function to focus more on the minority class. I made this decision as I wanted to use Scikit learn's pipeline as an estimator in a GridSearchCV, in order to tune my hyper-parameters.
 
@@ -106,7 +106,7 @@ As we can see, there was a strong one time event in the middle of 2016. Such a s
 ### Approach
 I used the ACF and PACF graphs to determine the appropriate number of AR and MA lags. As I knew that loan activity tends to have a strong yearly pattern, I decided to incorporate the seasonality explicitly by using a SARIMAX model with 12 months lag.  
 I dealt with the strong one time event by replacing its values by the predictions from the best model.  
-A notebook on this analysis can be found here [a link](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/notebooks/Time%20Series%20Forecasting.ipynb)
+A notebook on this analysis can be found [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/notebooks/Time%20Series%20Forecasting.ipynb)
 
 ### Results
 The SARIMAX model was pretty successful in forecasting for the 30% unseen data:
