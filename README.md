@@ -106,7 +106,7 @@ As we can see, there was a strong one time event in the middle of 2016. Such a s
 ### Approach
 I used the ACF and PACF graphs to determine the appropriate number of AR and MA lags. As I knew that loan activity tends to have a strong yearly pattern, I decided to incorporate the seasonality explicitly by using a SARIMAX model with 12 months lag.  
 I dealt with the strong one time event by replacing its values by the predictions from the best model.  
-A notebook on this analysis can be found HERE  
+A notebook on this analysis can be found here [a link](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/notebooks/Time%20Series%20Forecasting.ipynb)
 
 ### Results
 The SARIMAX model was pretty successful in forecasting for the 30% unseen data:
