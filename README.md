@@ -12,7 +12,7 @@ Naman Jain, February 2017
 - Next Steps
 
 ## Motivation:
-This project was developed as a capstone project for Galvanize's Data Science Immersive program.
+This project was developed as a capstone project for Galvanize's Data Science 	 program.
 
 I worked with data from [Shubham Housing Finance](http://www.shubham.co/), a firm in India that has given out more than USD $150 Million as loans over the past 5 years.  
 
@@ -36,7 +36,7 @@ Want a quick 4 minute overview? I gave a lightening presentation which can be fo
 First of my goals was to build a classifier that can predict the probability of a customer defaulting on their loan payment. If the firm can recognize such customers ahead of time then it can do a better job of getting ahead of the problem.
 
 This problem was harder than it seems for 2 reasons:  
-1) My target audience are people who have been excluded from the formal economy and hence don’t have the means to demonstrate their fiscal responsibility over time. As a result, I had to rely upon feature engineering in order to evaluate default probabiliy amongst them  
+1) My target audience are people who have been excluded from the formal economy and hence don’t have the means to demonstrate their fiscal responsibility over time. As a result, I had to rely upon feature engineering in order to evaluate default probability amongst them  
 2) Only 3% of the people ever default on their loans, making the classes very imbalanced  
 
 ### Data
@@ -60,7 +60,7 @@ I decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. 
 
 I decided not to oversample my imbalanced classes and instead used sample weights in AdaBoost to incentivize my cost function to focus more on the minority class. I made this decision as I wanted to use Scikit learn's pipeline as an estimator in a GridSearchCV, in order to tune my hyper-parameters.
 
-Although I eventually decided not to Oversample, I did however hack the pipeline functionality to exploit its book keeping while allowing me to have a resampling transformer step, the code can be found HERE.
+Although I eventually decided not to Oversample, I did however hack the pipeline functionality to exploit its book keeping while allowing me to have a re-sampling transformer step, the code can be found HERE.
 
 ### Results
 Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of a False Positive, aka making a call to a customer who wasn't going to default on their loan, to a False Negative, aka not making a call to a customer who was going to default on their loan, is about 1:43. Given this Cost-Benefit Matrix, I decided on the threshold which maximized my profit, as shown in the graph below  
@@ -121,6 +121,6 @@ The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186
 ## Next Steps:  
 - For the Loan Default Classifier I would like to extend model to allow a particular branch to determine the risk of loan default per portfolio
 
-- For the Location Recommender I would like to extend the Cost Function to determine the tradeoff between clustering of office locations vs having a larger spread. Also, make the Cost Function less sensitive to initializations.  
+- For the Location Recommender I would like to extend the Cost Function to determine the trade-off between clustering of office locations vs having a larger spread. Also, make the Cost Function less sensitive to initializations.  
 
 - For Forecasting Business I would like to Incorporate Exponential Smoothing (ETS) in the forecasting
