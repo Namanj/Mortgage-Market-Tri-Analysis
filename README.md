@@ -71,37 +71,47 @@ Classifying the 3% signal proved to be quite a challenge. The firm told me that 
 The optimal model had a Recall of 98%  
 
 ## Location Recommender:
-The firm has a number of office locations spread across a state, and they're wishing to expand. These offices, although crucial to facilitating new business, are fairly expensive and hence optimizing for their location is a top priority for management. My goal was to recommend new office locations to them which would maximize growth opportunity.
+The firm has a number of office locations spread across a state, and they're wishing to expand. These offices, although crucial to facilitating new business, are fairly expensive and hence optimizing for their location is a top priority for management. My goal was to recommend new office locations to them which would maximize growth opportunity
 
 ### Data
-I got the existing office profitability data from the firm, and I used data from India's census from 2011 to determine the district GDP.
+I got the existing office profitability data from the firm, and I used data from India's census from 2011 to determine the district GDP
 
 ### Approach
-This is a constrained optimization problem, with the objective being to find n global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
+This is a constrained optimization problem, with the objective being to find 'n' global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
   <img src='/images/Cost Function.png' width="1400" height="400">
 </p>
 
 
-The cost function was really sensitive to initializations and one of the main challenges of defining it was scaling the data that I had collected from different sources.  
+The cost function was really sensitive to initializations and one of the main challenges of defining it was scaling the data that I had collected from different sources  
 
 ### Results
-The cost function strikes a balance between clustering of office locations vs spreading them out.  
+The cost function strikes a balance between clustering of office locations vs spreading them out  
+
 <p align="center">
   <img src='/images/UP_visualized.png'  width="700"  height="600">
 </p>
 
 ## Forecasting Business:
-Finally my 3rd goal was to be able to predict upcoming volume of business over the next quarter so that Shubham can better manage its capital reserves. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.
+My 3rd and final goal was to be able to predict upcoming volume of business over the next quarter so that the firm can better manage its capital reserves. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.  
 
+### Data
+This is the amount of business the firm has done per month from 2012 to 2016:
 <p align="center">
   <img src='/images/Shubham volume of business overtime.png' width="700"  height="400">
 </p>
 
+### Approach
+I used the ACF and PACF graphs to determine the 
+A notebook on this analysis can be found HERE  
+
+### Results
+The model was pretty successful in forecasting for the 30% unseen data:
 <p align="center">
   <img src='/images/Forecast.png' width="900"  height="500">
 </p>
+The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186
 
 ## Next Steps:
 
