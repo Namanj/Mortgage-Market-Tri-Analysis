@@ -14,7 +14,7 @@ Naman Jain, February 2017
 ## Motivation:
 This project was developed as a capstone project for Galvanize's Data Science Immersive program.
 
-I worked with data from Shubham Housing Finance, a firm in India that has given out more than USD $150 Million as loans over the past 5 years.  
+I worked with data from [Shubham Housing Finance](http://www.shubham.co/), a firm in India that has given out more than USD $150 Million as loans over the past 5 years.  
 
 My goal was to use data science to help the firm optimize its usage of capital, both in its loan allocation process and in its expansion.  
 
