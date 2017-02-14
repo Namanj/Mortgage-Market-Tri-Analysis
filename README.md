@@ -74,10 +74,11 @@ The optimal model had a Recall of 98%
 The firm has a number of office locations spread across a state, and they're wishing to expand. These offices, although crucial to facilitating new business, are fairly expensive and hence optimizing for their location is a top priority for management. My goal was to recommend new office locations to them which would maximize growth opportunity
 
 ### Data
-I got the existing office profitability data from the firm, and I used data from India's census from 2011 to determine the district GDP
+I got the existing office profitability data from the firm.  
+I used data from India's census from 2011 to determine the district GDP
 
 ### Approach
-This is a constrained optimization problem, with the objective being to find 'n' global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
+This is a constrained optimization problem, with the objective being to find $n$ global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
   <img src='/images/Cost Function.png' width="1400" height="400">
