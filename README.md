@@ -84,6 +84,7 @@ This is a constrained optimization problem, with the objective being to find 'n'
   <img src='/images/Cost Function.png' width="1400" height="400">
 </p>
 
+I used Scipy Optimize BasinHopping method to traverse the cost function as it gives a lot of low level control over the optimizing function, and it does multiple random jumps to make sure we don't get stuck in a local minima. The code can be found [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Location_Optimizer.py)
 
 The cost function was really sensitive to initializations and one of the main challenges of defining it was scaling the data that I had collected from different sources  
 
@@ -121,4 +122,4 @@ The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186
 
 - For the Location Recommender I would like to extend the Cost Function to determine the tradeoff between clustering of office locations vs having a larger spread. Also, make the Cost Function less sensitive to initializations.  
 
-- For the Forecasting Business I would like to Incorporate Exponential Smoothing (ETS) in the forecasting
+- For Forecasting Business I would like to Incorporate Exponential Smoothing (ETS) in the forecasting
