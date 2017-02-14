@@ -55,7 +55,8 @@ I eventually decided to use these features in my model:
 - Tenor - Represent loan repayment period
 - Amt Db - Represents amount of loan disbursed to client till Nov '16
 
-I decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Loan%20Default%20Pipeline.py)
+I decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found  
+[here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Loan%20Default%20Pipeline.py)
 
 I decided not to oversample my imbalanced classes and instead used sample weights in AdaBoost to incentivize my cost function to focus more on the minority class. I made this decision as I wanted to use Scikit learn's pipeline as an estimator in a GridSearchCV, in order to tune my hyper-parameters.
 
