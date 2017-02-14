@@ -116,15 +116,9 @@ The SARIMAX model was pretty successful in forecasting for the 30% unseen data:
 </p>
 The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186
 
-## Next Steps:
-Loan Default Classifier :
-Extend model to allow a particular branch to determine the risk of loan default per portfolio
+## Next Steps:  
+- For the Loan Default Classifier I would like to extend model to allow a particular branch to determine the risk of loan default per portfolio
 
-Location Recommender :
-Extend Cost Function to determine the tradeoff between clustering of office locations vs having a larger spread
-Make Cost Function less sensitive to initializations 
+- For the Location Recommender I would like to extend the Cost Function to determine the tradeoff between clustering of office locations vs having a larger spread. Also, make the Cost Function less sensitive to initializations.  
 
-Forecasting Business :
-Incorporate Exponential Smoothing (ETS) in the forecasting
-
-
+- For the Forecasting Business I would like to Incorporate Exponential Smoothing (ETS) in the forecasting
