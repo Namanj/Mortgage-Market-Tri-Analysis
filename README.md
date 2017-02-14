@@ -78,7 +78,7 @@ I got the existing office profitability data from the firm.
 I used data from India's census from 2011 to determine the district GDP
 
 ### Approach
-This is a constrained optimization problem, with the objective being to find $n$ global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
+This is a constrained optimization problem, with the objective being to find 'n' global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
   <img src='/images/Cost Function.png' width="1400" height="400">
@@ -89,7 +89,7 @@ The cost function was really sensitive to initializations and one of the main ch
 
 ### Results
 The cost function strikes a balance between clustering of office locations vs spreading them out  
-
+Here we can see the cost function is able to recommend 'n' globally optimal office locations:  
 <p align="center">
   <img src='/images/UP_visualized.png'  width="700"  height="600">
 </p>
