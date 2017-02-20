@@ -20,7 +20,7 @@ My goal was to use data science to help the firm optimize its usage of capital, 
 
 I decided to break this broad goal down into 3 individual more specific goals:  
 1) Build a classifier that predicts the probability that a customer will default on their loan  
-[Link-name1](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/README.md#L78)
+[Link-name1](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/README.md#L78)
 2) Recommend new office locations which maximize growth potential  
 3) Forecast upcoming amount of business over the next quarter  
 
