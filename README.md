@@ -21,7 +21,7 @@ My goal was to use data science to help the firm optimize its usage of capital, 
 I decided to break this broad goal down into 3 individual more specific goals:  
 1) Build a classifier that predicts the probability that a customer will default on their loan  
 2) Recommend new office locations which maximize growth potential  
-3) [Forecast upcoming amount of business over the next quarter](#Forecasting-Business:)  
+3) [Forecast upcoming amount of business over the next quarter](#1-Forecasting-Business:)  
 
 Want a quick 4 minute overview? I gave a lightening presentation which can be found here:
 <p align="center">
@@ -104,7 +104,7 @@ The visualization code can be found [here](https://github.com/Namanj/Mortgage-Ma
 I add the previously accepted point into my cost function calculation after each iteration of the Basin Hopping function which ensures that the recommendations as a whole represent the 'n' best locations.  
 However it's quite a challenge to determine whether these recommendations are infact globally optimal. I'm continuing to work with the firm to understand these group of recommendations in a real world context and tweak the cost function.  
 
-## Forecasting Business:
+## 1 Forecasting Business:
 My 3rd and final goal was to be able to predict upcoming volume of business over the next quarter so that the firm can better manage its capital reserves  
 
 ### Data
