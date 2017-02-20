@@ -101,10 +101,11 @@ Here we can see the cost function is able to recommend 'n' globally optimal offi
 
 The visualization code can be found [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Location_Recommender.py)  
 
-I add the previously accepted point into my cost function calculation after each iteration of the Basin Hopping function which ensures that the recommendations as a whole represent the 'n' best locations. However it's quite a challenge to determine whether these recommendations are infact globally optimal. I'm continuing to work with the firm to understand these group of recommendations in a real world context and tweak the cost function.  
+I add the previously accepted point into my cost function calculation after each iteration of the Basin Hopping function which ensures that the recommendations as a whole represent the 'n' best locations.  
+However it's quite a challenge to determine whether these recommendations are infact globally optimal. I'm continuing to work with the firm to understand these group of recommendations in a real world context and tweak the cost function.  
 
 ## Forecasting Business:
-My 3rd and final goal was to be able to predict upcoming volume of business over the next quarter so that the firm can better manage its capital reserves.  
+My 3rd and final goal was to be able to predict upcoming volume of business over the next quarter so that the firm can better manage its capital reserves  
 
 ### Data
 This is the amount of business the firm has done per month from 2012 to 2016:
@@ -121,7 +122,7 @@ A notebook on this analysis can be found [here](https://github.com/Namanj/Mortga
 ### Results
 The SARIMAX model was pretty successful in forecasting for the 30% unseen data:
 <p align="center">
-  <img src='/images/Forecast.png' width="1000"  height="600">
+  <img src='/images/Forecast.png' width="1000"  height="550">
 </p>
 The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186  
 
