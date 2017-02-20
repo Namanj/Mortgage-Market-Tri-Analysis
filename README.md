@@ -20,7 +20,6 @@ My goal was to use data science to help the firm optimize its usage of capital, 
 
 I decided to break this broad goal down into 3 individual more specific goals:  
 1) Build a classifier that predicts the probability that a customer will default on their loan  
-[Link-name1](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/README.md#L78)
 2) Recommend new office locations which maximize growth potential  
 3) Forecast upcoming amount of business over the next quarter  
 
@@ -100,8 +99,12 @@ Here we can see the cost function is able to recommend 'n' globally optimal offi
   <img src='/images/UP_visualized.png'  width="700"  height="600">
 </p>
 
+The visualization code can be found [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Location_Recommender.py)  
+
+I add the previously accepted point into my cost function calculation after each iteration of the Basin Hopping function which ensures that the recommendations as a whole represent the 'n' best locations. However it's quite a challenge to determine whether these recommendations are infact globally optimal. I'm continuing to work with the firm to understand these group of recommendations in a real world context and tweak the cost function.  
+
 ## Forecasting Business:
-My 3rd and final goal was to be able to predict upcoming volume of business over the next quarter so that the firm can better manage its capital reserves. If we can do a better job of predicting the volume of incoming business over a time period then we can negotiate better terms for our loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants.  
+My 3rd and final goal was to be able to predict upcoming volume of business over the next quarter so that the firm can better manage its capital reserves.  
 
 ### Data
 This is the amount of business the firm has done per month from 2012 to 2016:
@@ -109,7 +112,7 @@ This is the amount of business the firm has done per month from 2012 to 2016:
   <img src='/images/Shubham volume of business overtime.png' width="700"  height="400">
 </p>
 
-As we can see, there was a strong one time event in the middle of 2016. Such a strong one time event, this close to the horizon, is very bad from a forecasting perspective, and I had to deal with it before I could do the forecasting  
+As we can see, there was a strong one time event in the middle of 2016. Such a strong one time event, this close to the horizon, is very bad from a forecasting perspective and I had to deal with it before I could do the forecasting  
 ### Approach
 I used the ACF and PACF graphs to determine the appropriate number of AR and MA lags. As I knew that loan activity tends to have a strong yearly pattern, I decided to incorporate the seasonality explicitly by using a SARIMAX model with 12 months lag.  
 I dealt with the strong one time event by replacing its values by the predictions from the best model.  
@@ -118,10 +121,11 @@ A notebook on this analysis can be found [here](https://github.com/Namanj/Mortga
 ### Results
 The SARIMAX model was pretty successful in forecasting for the 30% unseen data:
 <p align="center">
-  <img src='/images/Forecast.png' width="1000"  height="500">
+  <img src='/images/Forecast.png' width="1000"  height="600">
 </p>
-The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186
+The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186  
 
+This ability to predict the upcoming amount of business will help the firm better negotiate terms for its loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants  
 ## Next Steps:  
 - For the Loan Default Classifier I would like to extend model to allow a particular branch to determine the risk of loan default per portfolio
 
