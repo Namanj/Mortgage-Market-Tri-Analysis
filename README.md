@@ -4,12 +4,15 @@ Optimizing Capital Allocation for Mortgage Market Loans
 Naman Jain, February 2017
 
 ## Contents:
-- Motivation
+- Motivation:
+  * [Loan Default Classifier](#loan-default-classifier)  
+  * [Location Recommender](#location-recommender) 
+  * [Forecasting Business](#forecasting-business)   
 - For each of the 3 goals:
 	* Data
 	* Approach
 	* Results
-- Next Steps
+- [Next Steps](#next-steps)
 
 ## Motivation:
 This project was developed as a capstone project for Galvanize's Data Science 	 program.
@@ -19,9 +22,9 @@ I worked with data from [Shubham Housing Finance](http://www.shubham.co/), a fir
 My goal was to use data science to help the firm optimize its usage of capital, both in its loan allocation process and in its expansion.  
 
 I decided to break this broad goal down into 3 individual more specific goals:  
-1. [Build a classifier that predicts the probability that a customer will default on their loan](#loan-default-classifier)  
-2. [Recommend new office locations which maximize growth potential](#location-recommender)  
-3. [Forecast upcoming amount of business over the next quarter](#forecasting-business)  
+1. Build a classifier that predicts the probability that a customer will default on their loan  
+2. Recommend new office locations which maximize growth potential  
+3. Forecast upcoming amount of business over the next quarter   
 
 Want a quick 4 minute overview? I gave a lightening presentation which can be found here:
 <p align="center">
