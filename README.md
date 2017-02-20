@@ -14,12 +14,13 @@ Naman Jain, February 2017
 ## Motivation:
 This project was developed as a capstone project for Galvanize's Data Science 	 program.
 
-I worked with data from [Shubham Housing Finance](http://www.shubham.co/), a firm in India that has given out more than USD $150 Million as loans over the past 5 years.  
+I worked with data from [Shubham Housing Finance](http://www.shubham.co/), a firm in India that has given out more than USD $150 Million as mortgage loans over the past 5 years.  
 
 My goal was to use data science to help the firm optimize its usage of capital, both in its loan allocation process and in its expansion.  
 
 I decided to break this broad goal down into 3 individual more specific goals:  
 1) Build a classifier that predicts the probability that a customer will default on their loan  
+# Header 1
 2) Recommend new office locations which maximize growth potential  
 3) Forecast upcoming amount of business over the next quarter  
 
@@ -45,7 +46,8 @@ There were a total of ~15k data points with each representing a loan, and there 
 
 ### Approach
 I spent quite some time reducing the dimensionality of my data by sub-selecting the categorical variables based on signal to noise ratio, sub-selecting the numerical columns by thinking about how they would correlate with my dependent variable, and by doing some feature engineering.  
-I eventually decided to use these features in my model:  
+
+I eventually decided to use these features in my model:
 - Type - Whether loan has been downsized
 - Product Par Name - Loan product category
 - Name of Proj - Whether loan was processed as part of a Housing project, or if it was given directly to the customer
@@ -58,20 +60,23 @@ I eventually decided to use these features in my model:
 I decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. The code can be found  
 [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Loan%20Default%20Pipeline.py)
 
-I decided not to oversample my imbalanced classes and instead used sample weights in AdaBoost to incentivize my cost function to focus more on the minority class. I made this decision as I wanted to use Scikit learn's pipeline as an estimator in a GridSearchCV, in order to tune my hyper-parameters.
+I decided not to oversample my imbalanced classes and instead used sample weights in AdaBoost to incentivize my cost function to focus more on the minority class. I made this decision as I wanted to use Scikit learn's Pipeline as an estimator in a GridSearchCV, in order to tune my hyper-parameters.
 
 Although I eventually decided not to Oversample, I did however hack the pipeline functionality to exploit its book keeping while allowing me to have a re-sampling transformer step, the code can be found HERE.
 
 ### Results
-Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of a False Positive, aka making a call to a customer who wasn't going to default on their loan, to a False Negative, aka not making a call to a customer who was going to default on their loan, is about 1:43. Given this Cost-Benefit Matrix, I decided on the threshold which maximized my profit, as shown in the graph below  
+Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of a False Positive, aka making a call to a customer who wasn't going to default on their loan, to a False Negative, aka not making a call to a customer who was going to default on their loan, is about 1:43.  
+For this Cost-Benefit Matrix, I decided on the threshold which maximized my profit, as shown in the graph below:  
 
 <p align="center">
   <img src='/images/determine best threshold.png' width="900"  height="550">
 </p>
 
-The optimal model had a Recall of 98%  
+The optimal model had a Recall of 98%. The Precision wasn't very high which indicates that the model is overfitting for the minority class, but given the Cost-Benefit matrix this is the optimal solution for the business  
+
 
 ## Location Recommender:
+[Link-name1](#Header1)
 The firm has a number of office locations spread across a state, and they're wishing to expand. These offices, although crucial to facilitating new business, are fairly expensive and hence optimizing for their location is a top priority for management. My goal was to recommend new office locations to them which would maximize growth opportunity
 
 ### Data
@@ -82,10 +87,10 @@ I used data from India's census from 2011 to determine the district GDP
 This is a constrained optimization problem, with the objective being to find 'n' global minimas of a cost function over a Longitude-Latitude space. I defined the cost function as a linear combination of parameters as such:
 
 <p align="center">
-  <img src='/images/Cost Function.png' width="1400" height="400">
+  <img src='/images/Cost Function.png' width="1400" height="350">
 </p>
 
-I used Scipy Optimize BasinHopping method to traverse the cost function as it gives a lot of low level control over the optimizing function, and it does multiple random jumps to make sure we don't get stuck in a local minima. The code can be found [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Location_Optimizer.py)
+I used Scipy Optimize Basin Hopping method to traverse the cost function as it gives a lot of low level control over the optimizing function, and it does multiple random jumps to make sure we don't get stuck in a local minima. The code can be found [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Location_Optimizer.py)
 
 The cost function was really sensitive to initializations and one of the main challenges of defining it was scaling the data that I had collected from different sources  
 
