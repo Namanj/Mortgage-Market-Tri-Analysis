@@ -20,7 +20,7 @@ My goal was to use data science to help the firm optimize its usage of capital, 
 
 I decided to break this broad goal down into 3 individual more specific goals:  
 1) Build a classifier that predicts the probability that a customer will default on their loan  
-# Header 1
+[Link-name1](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/README.md#L78)
 2) Recommend new office locations which maximize growth potential  
 3) Forecast upcoming amount of business over the next quarter  
 
@@ -76,7 +76,6 @@ The optimal model had a Recall of 98%. The Precision wasn't very high which indi
 
 
 ## Location Recommender:
-[Link-name1](#Header1)
 The firm has a number of office locations spread across a state, and they're wishing to expand. These offices, although crucial to facilitating new business, are fairly expensive and hence optimizing for their location is a top priority for management. My goal was to recommend new office locations to them which would maximize growth opportunity
 
 ### Data
