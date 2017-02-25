@@ -15,7 +15,7 @@ Naman Jain, February 2017
 - [Next Steps](#next-steps)
 
 ## Motivation:
-This project was developed as a capstone project for Galvanize's Data Science 	 program.
+This project was developed as a 2 week capstone project for Galvanize's Data Science program.
 
 I worked with data from [Shubham Housing Finance](http://www.shubham.co/), a firm in India that has given out more than USD $150 Million as mortgage loans over the past 5 years.  
 
@@ -64,7 +64,7 @@ I decided to use the AdaBoost ensemble model, which I tuned using a GridSearch. 
 
 I decided not to oversample my imbalanced classes and instead used sample weights in AdaBoost to incentivize my cost function to focus more on the minority class. I made this decision as I wanted to use Scikit learn's Pipeline as an estimator in a GridSearchCV, in order to tune my hyper-parameters.
 
-Although I eventually decided not to Oversample, I did however hack the pipeline functionality to exploit its book keeping while allowing me to have a re-sampling transformer step, the code can be found HERE.
+Although I eventually decided not to Oversample, I did however hack the pipeline functionality to exploit its book keeping while allowing me to have a re-sampling transformer step, the code can be found [here](https://github.com/Namanj/Mortgage-Market-Tri-Analysis/blob/master/src/Adding%20resample%20step%20to%20sklearn%20Pipeline.py).
 
 ### Results
 Classifying the 3% signal proved to be quite a challenge. The firm told me that their cost of a False Positive, aka making a call to a customer who wasn't going to default on their loan, to a False Negative, aka not making a call to a customer who was going to default on their loan, is about 1:43.  
@@ -129,7 +129,7 @@ The SARIMAX model was pretty successful in forecasting for the 30% unseen data:
 </p>
 The baseline model RMSE was 0.384 while the SARIMAX model RMSE was 0.186  
 
-This ability to predict the upcoming amount of business will help the firm better negotiate terms for its loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants  
+This ability to predict the upcoming amount of business will help the firm negotiate better terms for its loans, minimize excessive capital in reserves, and also minimize opportunity cost of refusing higher risk loan applicants  
 ## Next Steps:  
 - For the Loan Default Classifier I would like to extend model to allow a particular branch to determine the risk of loan default per portfolio
 
